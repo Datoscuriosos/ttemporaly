@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stone and Grown</title>
+</head>
+<body>
+    
+    <div class="box">
+        <a href="index.html"><img class="logo" src="imges/logosinletra1.jpg" alt=""></a>
+    </div>
+
+
+    <div class="Introduction">
+        <h1>Stone and Grown</h1>
+        <h2>Landscaping & Interlock </h2>
+    </div>
+
+    <div class="About">
+        <h2>About us</h2>
+        <p>We are passionate about creating beautiful and function isidoor spaces. With yeare of experience in landscaping and interlook services, we are committed</p>
+    </div>
+
+    <div class="Services">
+        <h2>Services</h2>
+            <a href="x.html"><img src="imges/design.jpg" alt=""></a>
+
+            <a href="xx.html"><img src="imges/instalation.jpg" alt=""></a>
+
+            <a href="xxx.html"><img src="imges/maintenence.jpg" alt=""></a>
+
+            <a href="xxxx.html"><img src="imges/removal.jpg" alt=""></a>
+    </div>
+
+    <div class="Gallery">
+        <h2>Gallery</h2>
+        <img src="imges/example1.jpg">
+        <img src="imges/example2.jpg">
+    </div>
+
+    <div class="Testimonials">
+        <h2>Testimonials</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi aperiam possimus doloribus quibusdam eum deserunt quaerat temporibus expedita laboriosam rem, dolore veniam eaque magni at earum. Aut repellendus illo ullam.</p>
+        <p class="Person">-Alex D.</p>
+    </div>
+
+    <div class="Contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name <span style="color: red;">*</span></label><br>
+                    <input type="text" id="Name" name="name" placeholder="Your Name" required><br><br>
+
+            <label for="email">Email</label><br>
+                <input type="email" id="Email" name="email" placeholder="Your email"><br><br>
+
+            <label for="number">Phone Number <span style="color: red;">*</span></label><br>
+                    <input type="tel" id="Phone" name="Phone" placeholder="(000) 000-0000" required><br><br>
+                
+            <label for="message">Message <span style="color: red;">*</span></label><br>
+                    <textarea type="message" id="Message" placeholder="Tell us about your project..." required></textarea><br><br>
+
+            <button type="submit">Send message</button>
+        </form>
+    </div>
+
+    <div class="Footer">
+        <footer>
+            <p>&copy; 2025 Stone and Grown. All rights reserved.</p>
+            <a href="z/privacidad.html">Privacy Policy</a>
+            <a href="zz/cookies.html">Cookies notice</a>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+        const box = document.querySelector('.box');
+        if (window.scrollY > 50) {
+            box.style.backgroundColor = 'rgba(240, 240, 240, 0.8)'; // 50% transparente
+        } else {
+            box.style.backgroundColor = 'rgba(255, 255, 255, 1)'; // opaco
+        }
+        });
+    </script>
+</body>
+</html>

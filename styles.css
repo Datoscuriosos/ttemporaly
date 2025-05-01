@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header  */
+.box {
+    position: fixed;
+    width: 106%;
+    left: -3%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.box img {
+    position: fixed;
+    width: 80px;
+    top: 0px;
+    left: 10px;
+    padding: 0;
+
+}
+
+/* Introduction Section */
+.Introduction {
+    width: 106%;
+    left: -3%;
+    height: 110%;
+    margin-top: 2%;
+    position: relative;
+    text-align: center;
+    padding: 4rem 1rem;
+    background-image: url(imges/background.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow: hidden;
+
+}
+
+.Introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.Introduction h1,
+.Introduction h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.Introduction h1 {
+    padding: 20px;
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.Introduction h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+
+
+
+/* About Section  */
+.About {
+    padding: 2rem 1rem;
+    background-color: white;
+}
+
+.About h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.About p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Services Section  */
+.Services {
+    width: 80%;
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.Services h2 {
+    text-align: center;
+    color: #1b5e20;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.Services img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Gallery Section  */
+.Gallery {
+    width: 80%;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    background-color: withe;
+}
+
+.Gallery h2 {
+    text-align: center;
+    color: #1b5e20;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.Gallery img {
+    width: 100%;
+    margin-bottom: 1rem; 
+    border-radius: 8px;
+}
+
+/* Testimonials Section */
+.Testimonials {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    color: #fff3e0;
+}
+
+.Testimonials h2 {
+    text-align: center;
+    color: #1b5e20;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+}
+
+.Testimonials p {
+    text-align: center;
+    color: #333;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.Testimonials .Person {
+    text-align: center;
+    color: #333;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+
+/* Contact Section  */
+.Contact {
+    position: relative;
+    width: 50%;
+    left: 0%;
+    padding: 2rem 1rem;
+    background-color: #ede7f6;
+    
+}
+
+.Contact h2 {
+    color: #512da8;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.Contact input,
+.Contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Contact button {
+    padding: 0.7rem 1.5rem;
+    background-color: #512da8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.Footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+    width: 100%;
+    height: 110%;
+    margin-top: 1%;
+    margin-bottom: -10%;
+    position: relative;
+}
+
+@media (min-width: 300px) {
+    .Services img,
+    .Gallery img {
+        width: 48%;
+        margin-right: 2%;
+    }
+    .Services img:nth-child(1n),
+    .Gallery img:nth-child(2n){
+        margin-right: 0;
+        
+    }
+    .Introduction
+    .About,
+    .Services,
+    .Gallery,
+    .Testimonials,
+    .Contact {
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        padding: 2rem;
+    }
+
+    .Services img,
+    .Gallery img {
+        width: 23%;
+        margin-right: 2%;
+    }
+    
+    .Services img:nth-child(4n),
+    .Gallery img:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .Introduction
+    .About,
+    .Services,
+    .Gallery,
+    .Testimonials,
+    .Contact {
+        max-width: 2200px;
+        margin: auto;
+    }
+}
+
