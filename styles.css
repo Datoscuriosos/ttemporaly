@@ -34,6 +34,51 @@ body {
 
 }
 
+/* Menu tab  */
+.menu-icon {
+    font-size: 60px;
+    cursor: pointer;
+    position: fixed;
+    top: 1px;
+    right: 20px;
+    z-index: 10001;
+
+}
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-left: 81%;
+    background-color: rgb(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu a:hover{
+    background-color: #333;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    font-size: 36px;
+    color: #fff;
+}
+
 /* Introduction Section */
 .Introduction {
     width: 106%;
@@ -174,7 +219,7 @@ body {
 /* Contact Section  */
 .Contact {
     position: relative;
-    width: 50%;
+    width: 80%;
     left: 0%;
     padding: 2rem 1rem;
     background-color: #ede7f6;
@@ -229,6 +274,8 @@ body {
         
     }
     .Introduction
+    .menu,
+    .menu-icon,
     .About,
     .Services,
     .Gallery,
@@ -256,6 +303,8 @@ body {
     }
 
     .Introduction
+    .menu,
+    .menu-icon,
     .About,
     .Services,
     .Gallery,
@@ -265,4 +314,5 @@ body {
         margin: auto;
     }
 }
+
 
