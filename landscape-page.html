@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-landscape.css">
+    <link rel="icon" href="imges/logosinletra1.jpg" type="image/jpg">
+    <title>Landscaping Design</title>
+</head>
+<body>
+    <!-- logo y menu de la web -->
+    <div class="box">
+        <h1>STONE AND GROWN</h1>
+        <h2>LANDSCAPING SERVICE</h2>
+        <a href="index.html"><img class="logo" src="imges/logosinletra1.jpg" alt=""></a>
+    </div>
+
+        <span id="menuicon" class="menu-icon" onclick="openmenu()">≡</span>
+
+    <div id="menubar" class="menu">
+        <a href="javascript:(0)" class="close" onclick="closemenu()">x</a> 
+        <a href="index.html">Introduction</a>
+        <a href="landscape-page.html">Landscaping Design</a>
+        <a href="#interlock">Interlock Intallation</a>
+        <a href="#maintenance">Exterior maintenence</a>
+        <a href="#snowremoval">Snow Removal</a>
+    </div>
+
+<!-- first block  -->
+    <div class="first-block">
+        <h2>Landscaping Services</h2>
+        <p>Professional & reliable landscaping services in Toronto and GTA</p>
+        <img src="imges/patio1.jpg" alt="">
+        <!-- Botón -->
+<button class="button" onclick="document.getElementById('quoteModal').style.display='block'">Get a Quote</button>
+
+<!-- Modal -->
+<div id="quoteModal" class="modal">
+<div class="modal-content">
+    <span class="close" onclick="document.getElementById('quoteModal').style.display='none'">&times;</span>
+        <h2>Solicita tu presupuesto</h2>
+            <form onsubmit="enviarFormulario(event)">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <input type="tel" placeholder="Tu teléfono" required>
+                <textarea placeholder="Detalles del proyecto" required></textarea>
+                <button class="button-enviar" type="submit">Enviar</button>
+            </form>
+            <div id="mensajeExito">Gracias te contactaremos</div>
+    </div>
+</div>
+    </div>
+
+
+
+<!-- Second block  -->
+<div class="second-block">
+    <h2>Services</h2>
+    <h3>Landscaping</h3>
+    <p>we specialize in creating and maintaning beautiful, healthy gardens. From planting and lawn care to pruning and mulching, we provide comprehensive landscaping solutions.</p>
+    <img src="imges/patio2.jpg" alt="">
+    <img src="imges/patio3.jpg" alt="">
+</div>
+
+<!-- script code -->
+<script>
+    function openmenu () {
+        document.getElementById("menubar").style.width="250px"
+        
+    }
+
+    function closemenu () {
+        document.getElementById("menubar").style.width="0px"
+    }
+
+// Click outside menu 
+document.addEventListener('click', function(event) {
+const menu = document.getElementById('menubar');
+const menuIcon = document.getElementById('menuicon');
+
+const isClickInsideMenu = menu.contains(event.target);
+const isClickOnMenuIcon = menuIcon.contains(event.target);
+
+if (!isClickInsideMenu && !isClickOnMenuIcon && menu.style.width === "250px") {
+closemenu();
+}
+});
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const box = document.querySelector('.box');
+    if (window.scrollY > 50) {
+        box.style.backgroundColor = 'rgba(240, 240, 240, 0.8)'; // 50% transparent
+    } else {
+        box.style.backgroundColor = 'rgba(255, 255, 255, 1)'; // opaco
+    }
+    });
+</script>
+
+<script>
+    // Función para enviar el formulario
+    function enviarFormulario(event) {
+    event.preventDefault();
+    alert("Gracias por tu información. ¡Te contactaremos pronto!");
+    document.getElementById('quoteModal').style.display = 'none';
+    }
+
+    // Cerrar el modal si se hace clic fuera
+    window.onclick = function(event) {
+    const modal = document.getElementById('quoteModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+</script>
+
+<script>
+    function enviarFormulario(event) {
+    event.preventDefault();
+
+  // Mostrar mensaje personalizado
+const mensaje = document.getElementById('mensajeExito');
+    mensaje.style.display = 'block';
+
+  // Limpiar formulario
+event.target.reset();
+
+  // Cerrar modal después de unos segundos (opcional)
+setTimeout(() => {
+    document.getElementById('quoteModal').style.display = 'none';
+    mensaje.style.display = 'none';
+}, 3000);
+}
+</script>
+
+</body>
+</html>
